@@ -1,1 +1,8 @@
-<p>quiz works!</p>
+<div class="quiz-card">
+  <div class="quiz-container">
+    <img [src]="bollards[currentBollardIndex]?.image" alt="Country Image" class="quiz-image">
+    <input [(ngModel)]="userAnswer" placeholder="Enter country name" class="quiz-input">
+    <button (click)="checkAnswer()" class="quiz-button">Submit</button>
+    <p>{{ feedback }}</p>
+  </div>
+</div>

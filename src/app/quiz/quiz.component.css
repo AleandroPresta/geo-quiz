@@ -1,0 +1,22 @@
+.quiz-card {
+  @apply flex items-center justify-center h-screen;
+}
+
+.quiz-container {
+  @apply flex flex-col items-center justify-center p-4 bg-white shadow-lg rounded-lg;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.quiz-image {
+  @apply w-full h-auto object-cover mb-4;
+}
+
+.quiz-input {
+  @apply border border-gray-300 p-2 mb-4 w-full;
+}
+
+.quiz-button {
+  @apply bg-blue-500 text-white py-2 px-4 rounded mb-2 w-full;
+}
