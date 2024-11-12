@@ -36,7 +36,7 @@ export class QuizComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.http.get('https://raw.githubusercontent.com/AleandroPresta/geo-quiz/refs/heads/master/src/assets/bollards.json')
+    this.http.get('/assets/bollards.json')
       .subscribe((data: any) => {
         this.bollards = this.shuffle([...data.bollards]);
         this.totalBollards = this.bollards.length;
