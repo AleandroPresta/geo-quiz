@@ -18,5 +18,37 @@
 }
 
 .quiz-button {
-  @apply bg-blue-500 text-white py-2 px-4 rounded mb-2 w-full;
+  @apply bg-blue-500 text-white py-2 px-4 rounded mb-2 w-full flex-1;
+}
+
+.score-display {
+  @apply text-lg font-bold mb-4;
+}
+
+.incorrect-border {
+  @apply border-4 border-red-500;
+}
+
+.correct-country {
+  @apply text-green-600 font-bold mt-2;
+}
+
+.button-group {
+  @apply flex gap-2 w-full mb-2;
+}
+
+.show-answer {
+  @apply bg-gray-500;
+}
+
+.quiz-input:disabled {
+  @apply bg-gray-100 cursor-not-allowed;
+}
+
+.quiz-button:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+.completed {
+  @apply opacity-80;
 }
