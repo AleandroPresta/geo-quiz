@@ -1,0 +1,11 @@
+{
+    "bollards": [
+        {
+            "image": "https://geohints.com/Sources/Bollards/bollard_2.jpg",
+            "country": "Botswana"
+        },{
+            "image": "https://geohints.com/Sources/Bollards/bollard_7.jpg",
+            "country": "Ghana"
+        }
+    ]
+}
