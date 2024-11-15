@@ -52,6 +52,16 @@ export class QuizComponent implements OnInit {
     this.cluesToGuess = clueType;
     this.isQuizStarted = true;
     this.dataLoaded = false;
+    this.currentBollardIndex = 0;
+    this.userAnswer = '';
+    this.feedback = '';
+    this.incorrectAnswers = [];
+    this.correctAnswers = 0;
+    this.totalBollards = 0;
+    this.wasIncorrect = false;
+    this.correctCountry = '';
+    this.isQuizCompleted = false;
+
     let dataUrl = '';
     switch (this.cluesToGuess) {
       case 'bollards':
