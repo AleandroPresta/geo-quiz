@@ -11,6 +11,9 @@
     <div class="quiz-container" [class.completed]="isQuizCompleted">
       <button (click)="isQuizStarted = false" class="back-button">&larr; Back to Menu</button>
       <div *ngIf="dataLoaded; else loading">
+        <div class="progress-bar-container">
+          <div class="progress-bar" [style.width.%]="(correctAnswers / totalBollards) * 100"></div>
+        </div>
         <div class="score-display">Score: {{correctAnswers}} / {{totalBollards}}</div>
         <img [src]="bollards[currentBollardIndex]?.image" 
              [class.incorrect-border]="wasIncorrect"

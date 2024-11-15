@@ -56,3 +56,11 @@
 .completed {
   @apply opacity-80;
 }
+
+.progress-bar-container {
+  @apply w-full h-4 bg-white border border-black mb-4;
+}
+
+.progress-bar {
+  @apply h-full bg-green-500;
+}
