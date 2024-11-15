@@ -1,44 +1,62 @@
 <div *ngIf="!isQuizStarted" class="quiz-card">
   <div class="quiz-container">
-    <h2 class="text-xl md:text-2xl font-bold text-indigo-800 mb-6 md:mb-8">Select Clue Type</h2>
-    <button (click)="startQuiz('bollards')" class="quiz-button">Bollards</button>
-    <button (click)="startQuiz('telephone-poles')" class="quiz-button">Telephone Poles</button>
-    <button (click)="startQuiz('license-plates')" class="quiz-button">License Plates</button>
+    <div class="logo-container mb-6">
+      <h1 class="text-3xl font-bold text-indigo-900 mb-2">GeoQuiz</h1>
+      <p class="text-slate-600 text-base">Test your geography knowledge!</p>
+    </div>
+    <div class="grid grid-cols-1 gap-6 w-full px-4">
+      <button (click)="startQuiz('bollards')" class="quiz-button">
+        <i class="fas fa-map-marker-alt"></i>
+        Bollards
+      </button>
+      <button (click)="startQuiz('telephone-poles')" class="quiz-button">
+        <i class="fas fa-phone-alt"></i>
+        Telephone Poles
+      </button>
+      <button (click)="startQuiz('license-plates')" class="quiz-button">
+        <i class="fas fa-car"></i>
+        License Plates
+      </button>
+    </div>
   </div>
 </div>
-<div *ngIf="isQuizStarted">
-  <div class="quiz-card">
-    <div class="quiz-container" [class.completed]="isQuizCompleted">
-      <button (click)="isQuizStarted = false" class="back-button">
-        <span class="mr-2">←</span> Back
-      </button>
-      <div *ngIf="dataLoaded; else loading">
-        <div class="progress-bar-container">
-          <div class="progress-bar" [style.width.%]="(correctAnswers / totalBollards) * 100"></div>
-        </div>
-        <div class="score-display">Score: {{correctAnswers}} / {{totalBollards}}</div>
-        <img [src]="bollards[currentBollardIndex]?.image" 
-             [class.incorrect-border]="wasIncorrect"
-             alt="Country Image" 
-             class="quiz-image">
-        <input [(ngModel)]="userAnswer" 
-               placeholder="Enter country name" 
-               class="quiz-input"
-               [disabled]="isQuizCompleted">
-        <div class="button-group">
-          <button (click)="checkAnswer()" 
-                  class="quiz-button" 
-                  [disabled]="isQuizCompleted">Submit</button>
-          <button (click)="showAnswer()" 
-                  class="quiz-button show-answer" 
-                  [disabled]="isQuizCompleted">Show Answer</button>
-        </div>
-        <p class="text-slate-600">{{ feedback }}</p>
-        <p *ngIf="correctCountry" class="correct-country">Correct answer: {{ correctCountry }}</p>
+<div *ngIf="isQuizStarted" class="quiz-card">
+  <div class="quiz-container" [class.completed]="isQuizCompleted">
+    <button (click)="isQuizStarted = false" class="back-button mt-2 ml-2">
+      <i class="fas fa-arrow-left"></i>
+    </button>
+    <div *ngIf="dataLoaded; else loading" class="px-4 py-6">
+      <div class="progress-bar-container mb-4">
+        <div class="progress-bar" [style.width.%]="(correctAnswers / totalBollards) * 100"></div>
       </div>
-      <ng-template #loading>
-        <p class="text-slate-600 text-lg">{{ feedback }}</p>
-      </ng-template>
+      <div class="score-display mb-6">{{correctAnswers}} / {{totalBollards}}</div>
+      <img [src]="bollards[currentBollardIndex]?.image" 
+           [class.incorrect-border]="wasIncorrect"
+           [class.correct-border]="wasCorrect"
+           alt="Country Image" 
+           class="quiz-image mb-6">
+      <input [(ngModel)]="userAnswer" 
+             placeholder="Enter country name" 
+             class="quiz-input mb-4"
+             [disabled]="isQuizCompleted"
+             autocomplete="off">
+      <div class="button-group gap-4 mb-4">
+        <button (click)="checkAnswer()" 
+                class="quiz-button" 
+                [disabled]="isQuizCompleted">
+          <i class="fas fa-check"></i>
+        </button>
+        <button (click)="showAnswer()" 
+                class="quiz-button show-answer" 
+                [disabled]="isQuizCompleted">
+          <i class="fas fa-eye"></i>
+        </button>
+      </div>
+      <p class="feedback-text mb-2">{{ feedback }}</p>
+      <p *ngIf="correctCountry" class="correct-country mt-2">{{ correctCountry }}</p>
     </div>
+    <ng-template #loading>
+      <p class="text-slate-600 text-lg py-8">{{ feedback }}</p>
+    </ng-template>
   </div>
 </div>

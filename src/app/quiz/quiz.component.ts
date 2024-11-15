@@ -28,6 +28,7 @@ export class QuizComponent implements OnInit {
   isQuizCompleted: boolean = false;
   isQuizStarted: boolean = false;
   dataLoaded: boolean = false;
+  wasCorrect: boolean = false;
 
   constructor(private http: HttpClient) {}
 
@@ -98,15 +99,15 @@ export class QuizComponent implements OnInit {
 
   checkAnswer() {
     if (this.userAnswer.toLowerCase() === this.bollards[this.currentBollardIndex].country.toLowerCase()) {
-      this.feedback = 'Correct!';
       this.correctAnswers++;
       this.wasIncorrect = false;
+      this.wasCorrect = true;
       this.correctCountry = '';
     } else {
-      this.feedback = 'Incorrect, try again.';
       this.correctCountry = this.bollards[this.currentBollardIndex].country;
       this.incorrectAnswers.push({...this.bollards[this.currentBollardIndex], wasIncorrect: true});
       this.wasIncorrect = true;
+      this.wasCorrect = false;
     }
     setTimeout(() => {
       this.nextQuestion();
@@ -136,6 +137,7 @@ export class QuizComponent implements OnInit {
     }
     this.userAnswer = '';
     this.feedback = '';
+    this.wasCorrect = false;
     this.wasIncorrect = this.bollards[this.currentBollardIndex]?.wasIncorrect || false;
     this.correctCountry = '';
   }
