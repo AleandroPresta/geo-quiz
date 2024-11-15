@@ -15,6 +15,7 @@ import { NgIf } from '@angular/common';
 })
 export class QuizComponent implements OnInit {
   @Input() cluesToGuess: string = 'bollards';
+  @Input() numberOfItems: number = 10; // Variable to control the number of items
   bollards: any[] = [];
   currentBollardIndex: number = 0;
   userAnswer: string = '';
@@ -36,6 +37,11 @@ export class QuizComponent implements OnInit {
       [array[i], array[j]] = [array[j], array[i]];
     }
     return array;
+  }
+
+  private getRandomSubset(array: any[], size: number) {
+    const shuffled = this.shuffle(array);
+    return shuffled.slice(0, size);
   }
 
   ngOnInit() {
@@ -65,7 +71,8 @@ export class QuizComponent implements OnInit {
     this.http.get(dataUrl)
       .subscribe((data: any) => {
         if (data && data[this.cluesToGuess]) {
-          this.bollards = this.shuffle([...data[this.cluesToGuess]]);
+          const allItems = data[this.cluesToGuess];
+          this.bollards = this.getRandomSubset(allItems, this.numberOfItems);
           this.totalBollards = this.bollards.length;
           this.dataLoaded = true;
           this.feedback = ''; // Clear feedback message on successful data load
