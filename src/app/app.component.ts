@@ -7,8 +7,13 @@ import { QuizComponent } from "./quiz/quiz.component";
   standalone: true,
   imports: [RouterOutlet, QuizComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'geo-quiz';
+  selectedClue: string = 'bollards';
+
+  selectClue(clue: string) {
+    this.selectedClue = clue;
+  }
 }
