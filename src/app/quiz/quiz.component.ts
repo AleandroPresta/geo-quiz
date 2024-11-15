@@ -68,8 +68,9 @@ export class QuizComponent implements OnInit {
           this.bollards = this.shuffle([...data[this.cluesToGuess]]);
           this.totalBollards = this.bollards.length;
           this.dataLoaded = true;
+          this.feedback = ''; // Clear feedback message on successful data load
         } else {
-          this.feedback = 'Work in progress';
+          this.feedback = 'No data available';
           this.dataLoaded = false;
         }
       }, error => {
