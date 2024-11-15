@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { NgIf } from '@angular/common';
@@ -14,6 +14,7 @@ import { NgIf } from '@angular/common';
   styleUrls: ['./quiz.component.css']
 })
 export class QuizComponent implements OnInit {
+  @Input() cluesToGuess: string = 'bollards';
   bollards: any[] = [];
   currentBollardIndex: number = 0;
   userAnswer: string = '';
@@ -24,6 +25,7 @@ export class QuizComponent implements OnInit {
   wasIncorrect: boolean = false;
   correctCountry: string = '';
   isQuizCompleted: boolean = false;
+  isQuizStarted: boolean = false;
 
   constructor(private http: HttpClient) {}
 
@@ -36,9 +38,31 @@ export class QuizComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.http.get('https://raw.githubusercontent.com/AleandroPresta/geo-quiz/refs/heads/master/src/assets/bollards.json')
+    // ...existing code...
+  }
+
+  startQuiz(clueType: string) {
+    this.cluesToGuess = clueType;
+    this.isQuizStarted = true;
+    let dataUrl = '';
+    switch (this.cluesToGuess) {
+      case 'bollards':
+        dataUrl = 'https://raw.githubusercontent.com/AleandroPresta/geo-quiz/refs/heads/master/src/assets/bollards.json';
+        break;
+      case 'telephone-poles':
+        dataUrl = 'https://raw.githubusercontent.com/AleandroPresta/geo-quiz/refs/heads/master/src/assets/telephone-poles.json'; // Placeholder URL
+        break;
+      case 'license-plates':
+        dataUrl = 'https://raw.githubusercontent.com/AleandroPresta/geo-quiz/refs/heads/master/src/assets/license-plates.json'; // Placeholder URL
+        break;
+      default:
+        console.error('Unknown cluesToGuess type');
+        return;
+    }
+
+    this.http.get(dataUrl)
       .subscribe((data: any) => {
-        this.bollards = this.shuffle([...data.bollards]);
+        this.bollards = this.shuffle([...data[this.cluesToGuess]]);
         this.totalBollards = this.bollards.length;
       });
   }
