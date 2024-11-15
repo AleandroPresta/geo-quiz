@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { NgIf } from '@angular/common';
@@ -14,6 +14,8 @@ import { NgIf } from '@angular/common';
   styleUrls: ['./quiz.component.css']
 })
 export class QuizComponent implements OnInit {
+  @Input() cluesToGuess: string = 'bollards';
+  @Input() numberOfItems: number = 10; // Variable to control the number of items
   bollards: any[] = [];
   currentBollardIndex: number = 0;
   userAnswer: string = '';
@@ -24,6 +26,8 @@ export class QuizComponent implements OnInit {
   wasIncorrect: boolean = false;
   correctCountry: string = '';
   isQuizCompleted: boolean = false;
+  isQuizStarted: boolean = false;
+  dataLoaded: boolean = false;
 
   constructor(private http: HttpClient) {}
 
@@ -35,11 +39,60 @@ export class QuizComponent implements OnInit {
     return array;
   }
 
+  private getRandomSubset(array: any[], size: number) {
+    const shuffled = this.shuffle(array);
+    return shuffled.slice(0, size);
+  }
+
   ngOnInit() {
-    this.http.get('https://raw.githubusercontent.com/AleandroPresta/geo-quiz/refs/heads/master/src/assets/bollards.json')
+    // ...existing code...
+  }
+
+  startQuiz(clueType: string) {
+    this.cluesToGuess = clueType;
+    this.isQuizStarted = true;
+    this.dataLoaded = false;
+    this.currentBollardIndex = 0;
+    this.userAnswer = '';
+    this.feedback = '';
+    this.incorrectAnswers = [];
+    this.correctAnswers = 0;
+    this.totalBollards = 0;
+    this.wasIncorrect = false;
+    this.correctCountry = '';
+    this.isQuizCompleted = false;
+
+    let dataUrl = '';
+    switch (this.cluesToGuess) {
+      case 'bollards':
+        dataUrl = 'https://raw.githubusercontent.com/AleandroPresta/geo-quiz/refs/heads/master/src/assets/bollards.json';
+        break;
+      case 'telephone-poles':
+        dataUrl = 'https://raw.githubusercontent.com/AleandroPresta/geo-quiz/refs/heads/master/src/assets/telephone-poles.json'; // Placeholder URL
+        break;
+      case 'license-plates':
+        dataUrl = 'https://raw.githubusercontent.com/AleandroPresta/geo-quiz/refs/heads/master/src/assets/license-plates.json'; // Placeholder URL
+        break;
+      default:
+        console.error('Unknown cluesToGuess type');
+        return;
+    }
+
+    this.http.get(dataUrl)
       .subscribe((data: any) => {
-        this.bollards = this.shuffle([...data.bollards]);
-        this.totalBollards = this.bollards.length;
+        if (data && data[this.cluesToGuess]) {
+          const allItems = data[this.cluesToGuess];
+          this.bollards = this.getRandomSubset(allItems, this.numberOfItems);
+          this.totalBollards = this.bollards.length;
+          this.dataLoaded = true;
+          this.feedback = ''; // Clear feedback message on successful data load
+        } else {
+          this.feedback = 'No data available';
+          this.dataLoaded = false;
+        }
+      }, error => {
+        this.feedback = 'Work in progress';
+        this.dataLoaded = false;
       });
   }
 
