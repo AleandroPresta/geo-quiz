@@ -26,6 +26,7 @@ export class QuizComponent implements OnInit {
   correctCountry: string = '';
   isQuizCompleted: boolean = false;
   isQuizStarted: boolean = false;
+  dataLoaded: boolean = false;
 
   constructor(private http: HttpClient) {}
 
@@ -44,6 +45,7 @@ export class QuizComponent implements OnInit {
   startQuiz(clueType: string) {
     this.cluesToGuess = clueType;
     this.isQuizStarted = true;
+    this.dataLoaded = false;
     let dataUrl = '';
     switch (this.cluesToGuess) {
       case 'bollards':
@@ -62,8 +64,17 @@ export class QuizComponent implements OnInit {
 
     this.http.get(dataUrl)
       .subscribe((data: any) => {
-        this.bollards = this.shuffle([...data[this.cluesToGuess]]);
-        this.totalBollards = this.bollards.length;
+        if (data && data[this.cluesToGuess]) {
+          this.bollards = this.shuffle([...data[this.cluesToGuess]]);
+          this.totalBollards = this.bollards.length;
+          this.dataLoaded = true;
+        } else {
+          this.feedback = 'Work in progress';
+          this.dataLoaded = false;
+        }
+      }, error => {
+        this.feedback = 'Work in progress';
+        this.dataLoaded = false;
       });
   }
 

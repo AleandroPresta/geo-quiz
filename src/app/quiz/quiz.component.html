@@ -9,25 +9,30 @@
 <div *ngIf="isQuizStarted">
   <div class="quiz-card">
     <div class="quiz-container" [class.completed]="isQuizCompleted">
-      <div class="score-display">Score: {{correctAnswers}} / {{totalBollards}}</div>
-      <img [src]="bollards[currentBollardIndex]?.image" 
-           [class.incorrect-border]="wasIncorrect"
-           alt="Country Image" 
-           class="quiz-image">
-      <input [(ngModel)]="userAnswer" 
-             placeholder="Enter country name" 
-             class="quiz-input"
-             [disabled]="isQuizCompleted">
-      <div class="button-group">
-        <button (click)="checkAnswer()" 
-                class="quiz-button" 
-                [disabled]="isQuizCompleted">Submit</button>
-        <button (click)="showAnswer()" 
-                class="quiz-button show-answer" 
-                [disabled]="isQuizCompleted">Show Answer</button>
+      <div *ngIf="dataLoaded; else loading">
+        <div class="score-display">Score: {{correctAnswers}} / {{totalBollards}}</div>
+        <img [src]="bollards[currentBollardIndex]?.image" 
+             [class.incorrect-border]="wasIncorrect"
+             alt="Country Image" 
+             class="quiz-image">
+        <input [(ngModel)]="userAnswer" 
+               placeholder="Enter country name" 
+               class="quiz-input"
+               [disabled]="isQuizCompleted">
+        <div class="button-group">
+          <button (click)="checkAnswer()" 
+                  class="quiz-button" 
+                  [disabled]="isQuizCompleted">Submit</button>
+          <button (click)="showAnswer()" 
+                  class="quiz-button show-answer" 
+                  [disabled]="isQuizCompleted">Show Answer</button>
+        </div>
+        <p>{{ feedback }}</p>
+        <p *ngIf="correctCountry" class="correct-country">Correct answer: {{ correctCountry }}</p>
       </div>
-      <p>{{ feedback }}</p>
-      <p *ngIf="correctCountry" class="correct-country">Correct answer: {{ correctCountry }}</p>
+      <ng-template #loading>
+        <p>{{ feedback }}</p>
+      </ng-template>
     </div>
   </div>
 </div>
