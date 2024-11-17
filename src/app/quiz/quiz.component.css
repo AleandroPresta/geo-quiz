@@ -94,3 +94,5 @@
 .feedback-text {
   @apply text-sm text-slate-600 mb-1;
 }
+
+/* Optimize and remove unnecessary styles */
