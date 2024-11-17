@@ -2,375 +2,263 @@
     "bollards": [
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_2.jpg",
-            "country": "Botswana"
+            "country": "Botswana",
+            "continent": "Africa"
         },
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_7.jpg",
-            "country": "Ghana"
+            "country": "Ghana",
+            "continent": "Africa"
         },
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_8.jpg",
-            "country": "Kenya"
+            "country": "Kenya",
+            "continent": "Africa"
         },
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_13.jpg",
-            "country": "Senegal"
+            "country": "Senegal",
+            "continent": "Africa"
         },
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_15.jpg",
-            "country": "Senegal"
+            "country": "Senegal",
+            "continent": "Africa"
         },
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_19.jpg",
-            "country": "Bangladesh"
+            "country": "Bangladesh",
+            "continent": "Asia"
         },
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_20.jpg",
-            "country": "Bangladesh"
+            "country": "Bangladesh",
+            "continent": "Asia"
         },
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_27.jpg",
-            "country": "Cambodia"
+            "country": "Cambodia",
+            "continent": "Asia"
         },
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_28.jpg",
-            "country": "Cambodia"
+            "country": "Cambodia",
+            "continent": "Asia"
         },
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_31.jpg",
-            "country": "Cambodia"
+            "country": "Cambodia",
+            "continent": "Asia"
         },
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_59.jpg",
-            "country": "Malaysia"
+            "country": "Malaysia",
+            "continent": "Asia"
         },
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_63.jpg",
-            "country": "Mongolia"
+            "country": "Mongolia",
+            "continent": "Asia"
         },
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_121.jpg",
-            "country": "France"
+            "country": "France",
+            "continent": "Europe"
         },
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_125.jpg",
-            "country": "France"
+            "country": "France",
+            "continent": "Europe"
         },
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_142.jpg",
-            "country": "Monaco"
+            "country": "Monaco",
+            "continent": "Europe"
         },
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_147.jpg",
-            "country": "Netherlands"
+            "country": "Netherlands",
+            "continent": "Europe"
         },
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_151.jpg",
-            "country": "North Macedonia"
+            "country": "North Macedonia",
+            "continent": "Europe"
         },
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_154.jpg",
-            "country": "Poland"
+            "country": "Poland",
+            "continent": "Europe"
         },
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_160.jpg",
-            "country": "Romania"
+            "country": "Romania",
+            "continent": "Europe"
         },
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_176.jpg",
-            "country": "Turkey"
+            "country": "Turkey",
+            "continent": "Asia"
         },
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_183.jpg",
-            "country": "Canada"
+            "country": "Canada",
+            "continent": "North America"
         },
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_214.jpg",
-            "country": "Australia"
+            "country": "Australia",
+            "continent": "Oceania"
         },
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_215.jpg",
-            "country": "Australia"
+            "country": "Australia",
+            "continent": "Oceania"
         },
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_217.jpg",
-            "country": "Australia"
+            "country": "Australia",
+            "continent": "Oceania"
         },
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_218.jpg",
-            "country": "New Zealand"
+            "country": "New Zealand",
+            "continent": "Oceania"
         },
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_221.jpg",
-            "country": "Ecuador"
+            "country": "Ecuador",
+            "continent": "South America"
         },
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_222.jpg",
-            "country": "Ecuador"
+            "country": "Ecuador",
+            "continent": "South America"
         },
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_223.jpg",
-            "country": "Ecuador"
+            "country": "Ecuador",
+            "continent": "South America"
         },
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_224.jpg",
-            "country": "Ecuador"
+            "country": "Ecuador",
+            "continent": "South America"
         },
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_225.jpg",
-            "country": "Ecuador"
+            "country": "Ecuador",
+            "continent": "South America"
         },
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_227.jpg",
-            "country": "Ecuador"
+            "country": "Ecuador",
+            "continent": "South America"
         },
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_233.jpg",
-            "country": "Christmas Island"
+            "country": "Christmas Island",
+            "continent": "Oceania"
         },
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_234.jpg",
-            "country": "Christmas Island"
+            "country": "Christmas Island",
+            "continent": "Oceania"
         },
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_256.jpg",
-            "country": "United Kingdom"
+            "country": "United Kingdom",
+            "continent": "Europe"
         },
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_237.jpg",
-            "country": "South Africa"
+            "country": "South Africa",
+            "continent": "Africa"
         },
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_245.jpg",
-            "country": "Albania"
+            "country": "Albania",
+            "continent": "Europe"
         },
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_265.jpg",
-            "country": "Croatia"
+            "country": "Croatia",
+            "continent": "Europe"
         },
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_267.jpg",
-            "country": "United Kingdom"
+            "country": "United Kingdom",
+            "continent": "Europe"
         },
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_253.jpg",
-            "country": "Kyrgyzstan"
+            "country": "Kyrgyzstan",
+            "continent": "Asia"
         },
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_283.jpg",
-            "country": "Malaysia"
+            "country": "Malaysia",
+            "continent": "Asia"
         },
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_294.jpg",
-            "country": "Spain"
+            "country": "Spain",
+            "continent": "Europe"
         },
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_295.jpg",
-            "country": "Netherlands"
+            "country": "Netherlands",
+            "continent": "Europe"
         },
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_306.jpg",
-            "country": "Tunisia"
+            "country": "Tunisia",
+            "continent": "Africa"
         },
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_320.jpg",
-            "country": "Kenya"
+            "country": "Kenya",
+            "continent": "Africa"
         },
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_329.jpg",
-            "country": "Ecuador"
+            "country": "Ecuador",
+            "continent": "South America"
         },
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_331.jpg",
-            "country": "Netherlands"
+            "country": "Netherlands",
+            "continent": "Europe"
         },
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_335.jpg",
-            "country": "Ukraine"
+            "country": "Ukraine",
+            "continent": "Europe"
         },
         {
             "image": "https://geohints.com/Sources/Bollards/bollard_336.jpg",
-            "country": "Ukraine"
+            "country": "Ukraine",
+            "continent": "Europe"
         },
         {
-            "image": "https://geohints.com/Sources/Bollards/bollard_338.jpg",
-            "country": "Portugal"
+            "image": "https://geohints.com/Sources/Bollards/bollard_348.jpg",
+            "country": "Nigeria",
+            "continent": "Africa"
         },
         {
-            "image": "https://geohints.com/Sources/Bollards/bollard_342.jpg",
-            "country": "Spain"
+            "image": "https://geohints.com/Sources/Bollards/bollard_350.jpg",
+            "country": "Netherlands",
+            "continent": "Europe"
         },
         {
-            "image": "https://geohints.com/Sources/Bollards/bollard_345.jpg",
-            "country": "Bolivia"
+            "image": "https://geohints.com/Sources/Bollards/bollard_354.jpg",
+            "country": "United Kingdom",
+            "continent": "Europe"
         },
         {
-            "image": "https://geohints.com/Sources/Bollards/bollard_361.jpg",
-            "country": "Cambodia"
-        },
-        {
-            "image": "https://geohints.com/Sources/Bollards/bollard_363.jpg",
-            "country": "Uganda"
-        },
-        {
-            "image": "https://geohints.com/Sources/Bollards/bollard_367.jpg",
-            "country": "Ukraine"
-        },
-        {
-            "image": "https://geohints.com/Sources/Bollards/bollard_373.jpg",
-            "country": "Australia"
-        },
-        {
-            "image": "https://geohints.com/Sources/Bollards/bollard_394.jpg",
-            "country": "New Zealand"
-        },
-        {
-            "image": "https://geohints.com/Sources/Bollards/bollard_401.jpg",
-            "country": "Mexico"
-        },
-        {
-            "image": "https://geohints.com/Sources/Bollards/bollard_416.jpg",
-            "country": "Lebanon"
-        },
-        {
-            "image": "https://geohints.com/Sources/Bollards/bollard_430.jpg",
-            "country": "Australia"
-        },
-        {
-            "image": "https://geohints.com/Sources/Bollards/bollard_431.jpg",
-            "country": "Australia"
-        },
-        {
-            "image": "https://geohints.com/Sources/Bollards/bollard_435.jpg",
-            "country": "Poland"
-        },
-        {
-            "image": "https://geohints.com/Sources/Bollards/bollard_436.jpg",
-            "country": "Poland"
-        },
-        {
-            "image": "https://geohints.com/Sources/Bollards/bollard_437.jpg",
-            "country": "Poland"
-        },
-        {
-            "image": "https://geohints.com/Sources/Bollards/bollard_445.jpg",
-            "country": "United States"
-        },
-        {
-            "image": "https://geohints.com/Sources/Bollards/bollard_495.jpg",
-            "country": "United States"
-        },
-        {
-            "image": "https://geohints.com/Sources/Bollards/bollard_500.jpg",
-            "country": "Australia"
-        },
-        {
-            "image": "https://geohints.com/Sources/Bollards/bollard_514.jpg",
-            "country": "Ecuador"
-        },
-        {
-            "image": "https://geohints.com/Sources/Bollards/bollard_542.jpg",
-            "country": "Botswana"
-        },
-        {
-            "image": "https://geohints.com/Sources/Bollards/bollard_549.jpg",
-            "country": "United Kingdom"
-        },
-        {
-            "image": "https://geohints.com/Sources/Bollards/bollard_550.jpg",
-            "country": "Austria"
-        },
-        {
-            "image": "https://geohints.com/Sources/Bollards/bollard_558.jpg",
-            "country": "Bangladesh"
-        },
-        {
-            "image": "https://geohints.com/Sources/Bollards/bollard_569.jpg",
-            "country": "Ecuador"
-        },
-        {
-            "image": "https://geohints.com/Sources/Bollards/bollard_570.jpg",
-            "country": "Bolivia"
-        },
-        {
-            "image": "https://geohints.com/Sources/Bollards/bollard_571.jpg",
-            "country": "Bolivia"
-        },
-        {
-            "image": "https://geohints.com/Sources/Bollards/bollard_572.jpg",
-            "country": "Bolivia"
-        },
-        {
-            "image": "https://geohints.com/Sources/Bollards/bollard_580.jpg",
-            "country": "Japan"
-        },
-        {
-            "image": "https://geohints.com/Sources/Bollards/bollard_593.jpg",
-            "country": "Greenland"
-        },
-        {
-            "image": "https://geohints.com/Sources/Bollards/bollard_600.jpg",
-            "country": "Ireland"
-        },
-        {
-            "image": "https://geohints.com/Sources/Bollards/bollard_603.jpg",
-            "country": "United Arab Emirates"
-        },
-        {
-            "image": "https://geohints.com/Sources/Bollards/bollard_610.jpg",
-            "country": "Poland"
-        },
-        {
-            "image": "https://geohints.com/Sources/Bollards/bollard_614.jpg",
-            "country": "Rwanda"
-        },
-        {
-            "image": "https://geohints.com/Sources/Bollards/bollard_615.jpg",
-            "country": "Rwanda"
-        },
-        {
-            "image": "https://geohints.com/Sources/Bollards/bollard_633.jpg",
-            "country": "Netherlands"
-        },
-        {
-            "image": "https://geohints.com/Sources/Bollards/bollard_637.jpg",
-            "country": "Ghana"
-        },
-        {
-            "image": "https://geohints.com/Sources/Bollards/bollard_658.jpg",
-            "country": "Ghana"
-        },
-        {
-            "image": "https://geohints.com/Sources/Bollards/bollard_663.jpg",
-            "country": "Qatar"
-        },
-        {
-            "image": "https://geohints.com/Sources/Bollards/bollard_675.jpg",
-            "country": "Poland"
-        },
-        {
-            "image": "https://geohints.com/Sources/Bollards/bollard_680.jpg",
-            "country": "United Kingdom"
-        },
-        {
-            "image": "https://geohints.com/Sources/Bollards/bollard_684.jpg",
-            "country": "Netherlands"
-        },
-        {
-            "image": "https://geohints.com/Sources/Bollards/bollard_688.jpg",
-            "country": "Bolivia"
-        },
-        {
-            "image": "https://geohints.com/Sources/Bollards/bollard_690.jpg",
-            "country": "Ireland"
-        },
-        {
-            "image": "https://geohints.com/Sources/Bollards/bollard_693.jpg",
-            "country": "Italy"
-        },
-        {
-            "image": "https://geohints.com/Sources/Bollards/bollard_696.jpg",
-            "country": "Ireland"
+            "image": "https://geohints.com/Sources/Bollards/bollard_359.jpg",
+            "country": "United States",
+            "continent": "North America"
         }
     ]
 }
